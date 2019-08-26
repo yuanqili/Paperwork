@@ -6,8 +6,20 @@ Dunder Mifflin is a paper repository, containing all good papers we love.
 
 ## Requirements
 
-- You need to download `chromedriver` (named as-is) and place it under `res`
-  directory, e.g., `<project_root>/res/chromedriver`
+- You need to [download](https://chromedriver.chromium.org) `chromedriver`
+  (named as-is) and place it under `res` directory, e.g.,
+  ```
+  <project_root>/res/chromedriver
+  ```
+- A running Science Parse server to parse pdf papers. Follow the
+  [instructions](https://github.com/allenai/spv2) to run it. You then specify
+  its host and port number in the `.env` file, e.g.,
+  ```
+  sp_host = localhost
+  sp_port = 8081
+  ```
+  For people who has the access to UCLA CS subnet, you don't have to modify it.
+  We have a running server specified in this `.env` file.
 
 ## TODO
 
