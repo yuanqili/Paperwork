@@ -1,8 +1,15 @@
-# Dunder Mifflin
+# Paperwork - Reference Management Tool For Computer Scientists
 
-![logo](res/logo.jpg)
+![img](https://img.shields.io/badge/version-0.1.0-blue)
 
-Dunder Mifflin is a paper repository, containing all good papers we love.
+Have you ever been frustrated by existing reference management tool? Most CS
+papers are published to conferences not journals, while most existing tools
+hasn't addressed this problem. There database doesn't provide well access to
+CS papers.
+
+**Paperwork** is a reference management tool designed for computer scientists.
+It (will) is optimized for CS conferences. Managing your papers and references
+hasn't been this easy.
 
 ## Requirements
 
