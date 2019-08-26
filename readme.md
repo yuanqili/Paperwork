@@ -1,8 +1,13 @@
-![logo](res/logo.jpg)
-
 # Dunder Mifflin
 
+![logo](res/logo.jpg)
+
 Dunder Mifflin is a paper repository, containing all good papers we love.
+
+## Requirements
+
+- You need to download `chromedriver` (named as-is) and place it under `res`
+  directory, e.g., `<project_root>/res/chromedriver`
 
 ## TODO
 
