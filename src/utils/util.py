@@ -1,4 +1,5 @@
 import hashlib
+import re
 import urllib.parse
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
@@ -32,3 +33,35 @@ def format_str(s):
     s = s.replace(' : ', ': ')
     s = s.replace(' . ', '. ')
     return s
+
+
+def format_venue(s):
+
+    # leading year
+    leading_year = None
+    me = re.match('\d{4}', s[:4])
+    if me:
+        leading_year = int(me.group())
+        s = s[4:]
+    # trailing year
+    trailing_year = None
+    me = re.match('\d{4}', s[-4:])
+    if me:
+        trailing_year = int(me.group())
+        s = s[:-4]
+
+    year = None
+    if leading_year:
+        year = leading_year
+    if trailing_year:
+        year = trailing_year
+    if leading_year and trailing_year:
+        if leading_year == trailing_year:
+            year = leading_year
+        else:
+            year = None
+
+    return {
+        'venue': s.strip(),
+        'year': year,
+    }

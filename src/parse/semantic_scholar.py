@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from utils.util import format_str, build_url
+from utils.util import format_str, build_url, format_venue
 
 
 class SemanticScholar:
@@ -44,10 +44,12 @@ class SemanticScholar:
             result['s2id'] = api_result['paperId']
             result['title'] = api_result['title']
             result['authors'] = [a['name'] for a in api_result['authors']]
-            result['venue'] = api_result['venue']
-            result['year'] = api_result['year']
             result['abstract'] = api_result['abstract']
             result['topics'] = [t['topic'] for t in api_result['topics']]
+
+            formatted_venue = format_venue(api_result['venue'])
+            result['venue'] = formatted_venue['venue']
+            result['year'] = api_result['year'] or formatted_venue['year']
 
         return result
 
