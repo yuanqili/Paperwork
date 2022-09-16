@@ -5,7 +5,7 @@ cprint==1.1
 dataset==1.1.2
 fuzzywuzzy==0.17.0
 idna==2.8
-Mako==1.1.0
+Mako==1.2.2
 MarkupSafe==1.1.1
 pyPdf==1.13
 PyPDF2==1.26.0
