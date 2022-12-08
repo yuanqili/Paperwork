@@ -1,5 +1,5 @@
 alembic==1.0.11
-certifi==2019.6.16
+certifi==2022.12.7
 chardet==3.0.4
 cprint==1.1
 dataset==1.1.2
